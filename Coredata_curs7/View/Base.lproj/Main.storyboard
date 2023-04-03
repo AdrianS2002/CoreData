@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vc6-ci-8UV">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Users Controller-->
+        <scene sceneID="KK2-QT-ZRt">
+            <objects>
+                <viewController id="Vc6-ci-8UV" customClass="UsersController" customModule="Coredata_curs7" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oNU-Ye-cQc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="49P-PU-61I">
+                                <rect key="frame" x="0.0" y="59" width="393" height="739"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserTableCell" id="YeF-e4-0EX" customClass="UserTableCell" customModule="Coredata_curs7" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="20.666666030883789"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YeF-e4-0EX" id="MEw-Yy-cyz">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="20.666666030883789"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5z-ol-DIT">
+                                                    <rect key="frame" x="213" y="-7" width="90" height="34.666666666666664"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="zY6-HH-wHx"/>
+                                                    </constraints>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Delete"/>
+                                                    <connections>
+                                                        <action selector="onDeletePressed:" destination="YeF-e4-0EX" eventType="touchUpInside" id="K7v-j6-f81"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7a5-fS-oyP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="193" height="20.666666666666668"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIY-8P-X9e">
+                                                    <rect key="frame" x="303" y="-7" width="90" height="34.666666666666664"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="ch6-lM-rPy"/>
+                                                    </constraints>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Edit"/>
+                                                    <connections>
+                                                        <action selector="onEditPressed:" destination="YeF-e4-0EX" eventType="touchUpInside" id="95K-kg-yqS"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7a5-fS-oyP" firstAttribute="top" secondItem="MEw-Yy-cyz" secondAttribute="top" id="9QG-2y-gvP"/>
+                                                <constraint firstAttribute="bottom" secondItem="7a5-fS-oyP" secondAttribute="bottom" id="DT8-XU-rX5"/>
+                                                <constraint firstItem="a5z-ol-DIT" firstAttribute="centerY" secondItem="MEw-Yy-cyz" secondAttribute="centerY" id="N3u-N2-bTI"/>
+                                                <constraint firstAttribute="trailing" secondItem="dIY-8P-X9e" secondAttribute="trailing" id="Pwu-Hi-UVC"/>
+                                                <constraint firstItem="dIY-8P-X9e" firstAttribute="leading" secondItem="a5z-ol-DIT" secondAttribute="trailing" id="RDx-p7-BH8"/>
+                                                <constraint firstItem="7a5-fS-oyP" firstAttribute="leading" secondItem="MEw-Yy-cyz" secondAttribute="leading" id="fhq-2d-cNX"/>
+                                                <constraint firstItem="a5z-ol-DIT" firstAttribute="leading" secondItem="7a5-fS-oyP" secondAttribute="trailing" constant="20" id="gHT-Tp-ulQ"/>
+                                                <constraint firstItem="dIY-8P-X9e" firstAttribute="centerY" secondItem="MEw-Yy-cyz" secondAttribute="centerY" id="rJs-XG-uLK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="7a5-fS-oyP" id="3Zb-vT-Dgt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJU-jv-7qx">
+                                <rect key="frame" x="0.0" y="798" width="393" height="54"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Refresh">
+                                    <color key="baseForegroundColor" red="1" green="0.29803921570000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onRefreshPressed" destination="Vc6-ci-8UV" eventType="touchUpInside" id="oJe-wN-pHB"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="nB5-q6-eHQ">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                <color key="color" red="1" green="0.29803921570000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xr5-bf-zwq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="49P-PU-61I" firstAttribute="top" secondItem="xr5-bf-zwq" secondAttribute="top" id="7J4-ZB-Drb"/>
+                            <constraint firstItem="xJU-jv-7qx" firstAttribute="top" secondItem="49P-PU-61I" secondAttribute="bottom" id="7kR-o0-qfO"/>
+                            <constraint firstItem="49P-PU-61I" firstAttribute="leading" secondItem="xr5-bf-zwq" secondAttribute="leading" id="AsI-WE-cZH"/>
+                            <constraint firstItem="xJU-jv-7qx" firstAttribute="leading" secondItem="xr5-bf-zwq" secondAttribute="leading" id="ID9-xu-kpI"/>
+                            <constraint firstItem="nB5-q6-eHQ" firstAttribute="centerY" secondItem="oNU-Ye-cQc" secondAttribute="centerY" id="WAb-IA-Ofb"/>
+                            <constraint firstItem="xr5-bf-zwq" firstAttribute="trailing" secondItem="49P-PU-61I" secondAttribute="trailing" id="YHo-tP-0Gy"/>
+                            <constraint firstItem="xr5-bf-zwq" firstAttribute="bottom" secondItem="49P-PU-61I" secondAttribute="bottom" constant="20" id="ba6-Le-6zA"/>
+                            <constraint firstAttribute="bottom" secondItem="xJU-jv-7qx" secondAttribute="bottom" id="eI1-cR-mA4"/>
+                            <constraint firstItem="nB5-q6-eHQ" firstAttribute="centerX" secondItem="oNU-Ye-cQc" secondAttribute="centerX" id="iJv-2G-QTm"/>
+                            <constraint firstItem="xr5-bf-zwq" firstAttribute="trailing" secondItem="xJU-jv-7qx" secondAttribute="trailing" id="yvI-cy-6PJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="nB5-q6-eHQ" id="X67-Ky-PGq"/>
+                        <outlet property="tableView" destination="49P-PU-61I" id="bXg-Zw-dEn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tNb-gg-2wh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1251.145038167939" y="-58.450704225352112"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
